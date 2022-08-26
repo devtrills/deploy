@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from './dashboard.module.css';
 import { DashContent, DashFooter, DashHeader, DashLeftNavbar } from '../../components';
 
-export default function Home() {
+export default function Dashboard() {
     return (
         <div className={styles.body}>
             <Head>
