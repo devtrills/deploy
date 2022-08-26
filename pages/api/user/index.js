@@ -2,19 +2,22 @@
 // import { getSession } from '../libs/session';
 import Dashboard from '../../../public/src/containers/dashboard/Dashbord';
 import { useUser } from '@auth0/nextjs-auth0/dist/frontend/use-user';
-import {useRouter} from 'next/router';
+// import {useRouter} from 'next/router';
 
-const router = useRouter();
-const {user} = useUser();
-const User = () => {
-    if (!user) {
-      router.push('/api/auth/login');
-    }else{
-        // Show the user. 
-        return (
-            <Dashboard username={JSON.stringify(user, null, 2)} />
-        )
+
+export default function User () {
+    // const router = useRouter();
+
+      // Fetch the user client-side
+    const { user } = useUser({ redirectTo: '/login' })
+
+    // Server-render loading state
+    if (!user || user.isLoggedIn === false) {
+        return <Layout>Loading...</Layout>
     }
-}
 
-export default User;
+    // Show the user. 
+    return (
+        <Dashboard username={JSON.stringify(user, null, 2)} />
+    )
+}
