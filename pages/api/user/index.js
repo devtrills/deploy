@@ -9,7 +9,8 @@ export default function User () {
     // const router = useRouter();
 
       // Fetch the user client-side
-    const { user } = useUser({ redirectTo: '/login' })
+    const { user } = useUser({ redirectTo: '/login' });
+    console.log(user.email);
 
     // Server-render loading state
     if (!user || user.isLoggedIn === false) {

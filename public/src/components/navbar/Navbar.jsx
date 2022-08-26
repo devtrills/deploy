@@ -40,7 +40,7 @@ const Navbar = (props) => {
       </div>
       <div className="gpt3__navbar-sign">
         <p className='this is not a classname Sign in was here'></p>
-        <button type="button" onClick={() => router.push(props.signUrl)}>{props.sign}</button>
+        <button style={props.sign == 'Sign In' ? {background: '#31c88d'} : {}} type="button" onClick={() => router.push(props.signUrl)}>{props.sign}</button>
       </div>
       <div className="gpt3__navbar-menu">
         {toggleMenu
@@ -56,8 +56,8 @@ const Navbar = (props) => {
             <p><a href="#blog">Library</a></p>
           </div>
           <div className="gpt3__navbar-menu_container-links-sign">
-            <p>Sign in</p>
-            <button type="button">Sign up</button>
+            <p></p>
+            <button style={props.sign == 'Sign In' ? {background: '#31c88d'} : {}} type="button">Sign up</button>
           </div>
         </div>
         )}
