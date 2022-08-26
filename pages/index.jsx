@@ -2,6 +2,7 @@ import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0/dist/frontend/use-user';
 import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from '/public/src/containers';
 import { CTA, Brand, Navbar } from '/public/src/components';
+import Dashboard from '../public/src/containers/dashboard/Dashbord';
 
 // function Heeader({ title }) {
 // return <h1>{title ? title : 'Default title'}</h1>;
