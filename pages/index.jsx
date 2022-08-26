@@ -9,6 +9,13 @@ import { CTA, Brand, Navbar } from '/public/src/components';
 export default function Homepage () {
   const { user, error, isLoading } = useUser();
   console.log(user);
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
+  if(user){
+    return (
+      <Dashboard username={JSON.stringify(user, null, 2)} />
+    );
+  }
 
   return(
     <div className="App">
