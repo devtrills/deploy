@@ -3,7 +3,8 @@
 import Dashboard from '../../../public/src/containers/dashboard/Dashbord';
 import { useUser } from '@auth0/nextjs-auth0/dist/frontend/use-user';
 
-export const getServerSideProps = useUser(async function ({ user, error, isLoading }) {
+const { user, error, isLoading } = useUser();
+export const getServerSideProps = async function () {
 //   const { user } = req.session
 
   if (!user) {
@@ -18,7 +19,7 @@ export const getServerSideProps = useUser(async function ({ user, error, isLoadi
   return {
     props: { user },
   }
-})
+};
 
 const User = ({ user }) => {
   // Show the user. No loading state is required
