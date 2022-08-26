@@ -1,0 +1,50 @@
+/* header css starts  */
+.headcontainer{
+    display: flex;
+    height:70px;
+    background-color: rgb(255, 255, 255);
+    padding-left:200px;
+    justify-content: space-between;
+}
+.headwrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+}
+
+.title{
+    margin-left: 40px;
+}
+.title>h2{
+    color: rgb(0, 0, 0);;
+}
+.title>p{
+    color: rgb(0, 0, 0);;
+}
+.title>h2>span{
+    color:rgb(9, 112, 72);
+}
+.profile{
+    transform: scale(.4) translate(0%, -50%);
+}
+.image{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .headcontainer{
+        width: 100vw;
+        padding-left: 70px;
+    }
+    .headwrapper{
+        width: 70vw;
+    }
+    .profile{
+        right:0px;
+        transform: scale(.4) translate(30%, -50%);
+    }
+  
+}

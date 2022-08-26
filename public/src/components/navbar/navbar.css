@@ -2,10 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 2rem 6rem;
 }
-
+.gpt3__navbar_fixed {
+    width: 100vw;
+    position: fixed;
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    z-index: 1;
+    animation: dropNav 1s ease-in-out;
+    transform: translateY(0%);
+    opacity: 1;
+}
+@keyframes dropNav {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .gpt3__navbar-links {
     flex: 1;
     display: flex;

@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../logo.svg';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 // import {useSession} from 'next-auth/client';
 // import './navbar.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
   // const [session, loading ] = useSession();
   // console.log({session, loading});
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  // Fixed Nav Effects
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 100){
+        document.querySelector('.gpt3__navbar').classList.add('gpt3__navbar_fixed')
+      }else if(window.scrollY < 100){
+        document.querySelector('.gpt3__navbar').classList.remove('gpt3__navbar_fixed')
+      }
+    })
+  });
+  // authLinks
+  const router = useRouter();
 
   return (
     <div className="gpt3__navbar">
@@ -25,8 +39,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="gpt3__navbar-sign">
-        <p>Sign in</p>
-        <button type="button">Sign up</button>
+        <p className='this is not a classname Sign in was here'></p>
+        <button type="button" onClick={() => router.push(props.signUrl)}>{props.sign}</button>
       </div>
       <div className="gpt3__navbar-menu">
         {toggleMenu

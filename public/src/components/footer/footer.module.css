@@ -1,0 +1,12 @@
+/* Footer */
+.footercontainer{
+    position: fixed;
+    height: 10vh;
+    background-color: rgb(255, 255, 255);
+    padding-left:200px;
+    width: 100vw;
+    margin-top: calc(100vh - 10vh);
+}
+.footerwrapper{
+    cursor: pointer;
+}
