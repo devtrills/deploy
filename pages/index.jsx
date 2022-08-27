@@ -4,16 +4,14 @@ import { useUser } from '@auth0/nextjs-auth0/dist/frontend/use-user';
 import Homepage from './home';
 
 
+
 export default function Controller () {
-  // user
-  const { user, error, isLoading } = useUser();
-  // Hook
-  const [ userObj, setUserObj ] = useState({ user: null, error: null, isLoading: null});
-
-  setUserObj({user: user, error: error, isLoading: isLoading});
-
+    // user
+    const { user, error, isLoading } = useUser();
+      // Hook
+  const [ userObj, setUserObj ] = useState({user: user, error: error, isLoading: isLoading});
+  console.log(userObj)
   // const { user, error, isLoading } = useUser();
-  console.log('userObj');
   // if (userObj.isLoading) return <div>Loading...</div>;
   // if (userObj.error) return <div>{error.message}</div>;
   // if(userObj.user){
@@ -23,5 +21,5 @@ export default function Controller () {
   //   }
   
   
-    return(<Homepage /> );
+    return(<Homepage user={userObj} /> );
 }

@@ -6,7 +6,6 @@ import { CTA, Brand, Navbar } from '../../public/src/components';
 // return <h1>{title ? title : 'Default title'}</h1>;
 // }
 export default function Homepage (props) {
-
   return(
     <div className="App">
       <div className="gradient__bg">
