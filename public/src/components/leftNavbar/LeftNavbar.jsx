@@ -8,7 +8,7 @@ function leftnavbar() {
     const router = useRouter();
     return(
         <div className={styles.navcontainer}>
-            <div className={styles.logo} onClick={router.push('/home')}>
+            <div className={styles.logo} onClick={() => router.push('/home')}>
                 <h2>Investrill</h2>
             </div>
             <div className={styles.wrapper}>
@@ -27,7 +27,7 @@ function leftnavbar() {
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faHeart} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#" onClick={console.log('clicked fav')}>Favorite</a>
+                        <a href="#" onClick={() => console.log('clicked fav')}>Favorite</a>
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faCog} style={{width: "18px", cursor: "pointer"}} />
