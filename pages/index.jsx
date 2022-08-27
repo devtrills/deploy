@@ -21,7 +21,7 @@ export default function Controller () {
   setUserObj({user: user, error: error, isLoading: isLoading});
 
   // const { user, error, isLoading } = useUser();
-  console.log(this.state);
+  console.log(userObj);
   // if (userObj.isLoading) return <div>Loading...</div>;
   // if (userObj.error) return <div>{error.message}</div>;
   // if(userObj.user){
