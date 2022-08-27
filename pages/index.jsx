@@ -22,14 +22,14 @@ export default function Controller () {
 
   // const { user, error, isLoading } = useUser();
   console.log(this.state);
-  if (this.state.isLoading) return <div>Loading...</div>;
-  if (this.state.error) return <div>{error.message}</div>;
-  if(this.state.user){
-    return (
-      <Dashboard user={this.state.user} username={JSON.stringify(this.state.user, null, 2)} />
-      );
-    }
+  // if (this.state.isLoading) return <div>Loading...</div>;
+  // if (this.state.error) return <div>{error.message}</div>;
+  // if(this.state.user){
+  //   return (
+  //     <Dashboard user={this.state.user} username={JSON.stringify(this.state.user, null, 2)} />
+  //     );
+  //   }
   
   
-    return(<Homepage user={this.state.user} /> );
+    return(<Homepage user={this.state} /> );
 }
