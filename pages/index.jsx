@@ -8,6 +8,7 @@ import Homepage from './home';
 // }
 const returnUser = () => {
   const { user, error, isLoading } = useUser();
+  console.log(user);
 
   return { user, error, isLoading };
 }
@@ -24,8 +25,8 @@ export default function Controller () {
     return (
       <Dashboard user={userObj.user} username={JSON.stringify(userObj.user, null, 2)} />
       );
-    }else{
-      return(<Homepage user={userObj.user} /> );
     }
-
+  
+  
+    return(<Homepage user={userObj.user} /> );
 }
