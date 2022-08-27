@@ -6,17 +6,12 @@ import Homepage from './home';
 // function Heeader({ title }) {
 // return <h1>{title ? title : 'Default title'}</h1>;
 // }
-const returnUser = () => {
-  console.log(user);
-
-  return ;
-}
 
 export default function Controller () {
   // user
   const { user, error, isLoading } = useUser();
   // Hook
-  const [ userObj, setUserObj ] = useState({ user: null, error: null, isLoading: false});
+  const [ userObj, setUserObj ] = useState({ user: null, error: null, isLoading: null});
 
   setUserObj({user: user, error: error, isLoading: isLoading});
 
