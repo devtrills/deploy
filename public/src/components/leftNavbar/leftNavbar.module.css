@@ -70,6 +70,7 @@
     height: 40px;
     padding:10px;
     margin: 10px;
+    cursor: pointer;
 }
 .wrapper>ul{
     gap:5px;
