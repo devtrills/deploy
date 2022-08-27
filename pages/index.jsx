@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { useUser } from '@auth0/nextjs-auth0/dist/frontend/use-user';
-import Dashboard from '../public/src/containers/dashboard/Dashbord';
+// import Dashboard from '../public/src/containers/dashboard/Dashbord';
 import Homepage from './home';
 
-// function Heeader({ title }) {
-// return <h1>{title ? title : 'Default title'}</h1>;
-// }
 
 export default function Controller () {
   // user
@@ -26,5 +23,5 @@ export default function Controller () {
   //   }
   
   
-    return(<Homepage user={'jh'} /> );
+    return(<Homepage /> );
 }
