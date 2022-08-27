@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './leftNavbar.module.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBookOpen, faCog, faHeart, faRightToBracket, faRocket, faTachometer} from '@fortawesome/free-solid-svg-icons';
-import { Router } from 'next/router';
+import { useRouter } from 'next/router';
 
 function leftnavbar() {
+    const router = useRouter();
     return(
         <div className={styles.navcontainer}>
-            <div className={styles.logo} onClick={Router.push('/home')}>
+            <div className={styles.logo} onClick={router.push('/home')}>
                 <h2>Investrill</h2>
             </div>
             <div className={styles.wrapper}>
