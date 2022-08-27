@@ -31,11 +31,11 @@ function leftnavbar() {
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faCog} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="/api/auth/logout">Settings</a>
+                        <a href="#">Settings</a>
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faRightToBracket} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#">Logout</a>
+                        <a href="/api/auth/logout">Logout</a>
                     </li>
                 </ul>
             </div>

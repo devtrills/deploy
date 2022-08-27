@@ -6,6 +6,7 @@ import Homepage from './home';
 // function Heeader({ title }) {
 // return <h1>{title ? title : 'Default title'}</h1>;
 // }
+
 export default function Controller () {
   const { user, error, isLoading } = useUser();
   console.log(user);
@@ -14,8 +15,9 @@ export default function Controller () {
   if(user){
     return (
       <Dashboard user={user} username={JSON.stringify(user, null, 2)} />
-    );
-  }
+      );
+    }else{
+      return(<Homepage user={user} /> );
+    }
 
-  return(<Homepage user={user} /> );
 }
