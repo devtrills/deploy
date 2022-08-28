@@ -39,7 +39,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="gpt3__navbar-sign">
-        <p className='this is not a classname Sign in was here'></p>
+        {props.sign == 'Sign In' ? <p></p> : <p onClick={() => router.push('/api/app')}>Dashboard</p>}
         <button style={props.sign == 'Sign In' ? {background: '#31c88d'} : {}} type="button" onClick={() => router.push(props.signUrl)}>{props.sign}</button>
       </div>
       <div className="gpt3__navbar-menu">
@@ -56,8 +56,8 @@ const Navbar = (props) => {
             <p><a href="#blog">Library</a></p>
           </div>
           <div className="gpt3__navbar-menu_container-links-sign">
-            <p></p>
-            <button onClick={() => router.push(props.signUrl)} style={props.sign == 'Sign In' ? {background: '#31c88d'} : {}} type="button">Sign up</button>
+            {props.sign == 'Sign In' ? <p></p> : <p onClick={() => router.push('/api/app')}>Dashboard</p>}
+            <button onClick={() => router.push(props.signUrl)} style={props.sign == 'Sign In' ? {background: '#31c88d'} : {}} type="button">{props.sign}</button>
           </div>
         </div>
         )}

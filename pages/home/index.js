@@ -5,12 +5,13 @@ import getUser from '../api/hooks/user';
 // function Heeader({ title }) {
 // return <h1>{title ? title : 'Default title'}</h1>;
 // }
-export default function Homepage (props) {
-    console.log(getUser().isLoading);
+export default function Homepage () {
+    const userObj = getUser();
+
   return(
     <div className="App">
       <div className="gradient__bg">
-        <Navbar sign={!getUser().user ? 'Sign In' : 'Sign Out'} signUrl={!getUser().user ? '/api/auth/login' : '/api/auth/logout'} />
+        <Navbar sign={!userObj.user ? 'Sign In' : 'Sign Out'} signUrl={!userObj.user ? '/api/auth/login' : '/api/auth/logout'} />
         <Header />
       </div>
       <Brand />

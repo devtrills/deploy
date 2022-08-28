@@ -8,7 +8,7 @@ function Header(props) {
         <div className={styles.headcontainer}>
             <div className={styles.headwrapper}>
                 <div className={styles.title}>
-                    <h2>Hello, <span>{props.username}!</span></h2>
+                    <h2>Hello, <span>{props.username.split().pop().unshift().join('')}!</span></h2>
                     welcome to your workspace
                 </div>
             </div>
