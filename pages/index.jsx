@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import { useUser } from '@auth0/nextjs-auth0/dist/frontend/use-user';
 // import Dashboard from '../public/src/containers/dashboard/Dashbord';
 import Homepage from './home';
+import getUser from './api/hooks/user';
 
 
 
 export default function Controller () {
-    // user
-    const { user, error, isLoading } = useUser();
-      // Hook
-  const [ userObj, setUserObj ] = useState({user: user, error: error, isLoading: isLoading});
-  console.log(userObj)
+  console.log(getUser().user);
   // const { user, error, isLoading } = useUser();
   // if (userObj.isLoading) return <div>Loading...</div>;
   // if (userObj.error) return <div>{error.message}</div>;
@@ -21,5 +17,9 @@ export default function Controller () {
   //   }
   
   
-    return(<Homepage user={userObj} /> );
+    return(
+        <>
+          <Homepage  />
+        </>
+    );
 }
