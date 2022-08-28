@@ -4,6 +4,7 @@ import Image from 'next/image';
 import {userImg} from '../../containers/dashboard/imports';
 
 function Header(props) {
+    
     return (
         <div className={styles.headcontainer}>
             <div className={styles.headwrapper}>

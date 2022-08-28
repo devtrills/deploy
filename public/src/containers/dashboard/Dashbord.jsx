@@ -12,7 +12,7 @@ export default function Dashboard(props) {
             </Head>
             <DashFooter />
             <DashLeftNavbar />
-            <DashHeader username={props.username} />
+            <DashHeader user={props.user} />
             <DashContent />
         </div>
     );
