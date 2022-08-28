@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from './dashboard.module.css';
 import { DashContent, DashFooter, DashHeader, DashLeftNavbar } from '../../components';
 
-export default function Dashboard() {
+export default function Dashboard(props) {
     return (
         <div className={styles.body}>
             <Head>
@@ -12,7 +12,7 @@ export default function Dashboard() {
             </Head>
             <DashFooter />
             <DashLeftNavbar />
-            <DashHeader />
+            <DashHeader username={props.username} />
             <DashContent />
         </div>
     );

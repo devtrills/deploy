@@ -3,12 +3,12 @@ import styles from './header.module.css';
 import Image from 'next/image';
 import {userImg} from '../../containers/dashboard/imports';
 
-function Header() {
+function Header(props) {
     return (
         <div className={styles.headcontainer}>
             <div className={styles.headwrapper}>
                 <div className={styles.title}>
-                    <h2>Hello, <span>Siti!</span></h2>
+                    <h2>Hello, <span>{props.username}!</span></h2>
                     welcome to your workspace
                 </div>
             </div>
