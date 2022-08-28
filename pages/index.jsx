@@ -16,7 +16,7 @@ export default function Controller () {
     }else{
       return(
         <>
-          <Homepage user={getUser()} />
+          <Homepage user={getUser} />
         </>
     );
     }
