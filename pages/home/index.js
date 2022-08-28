@@ -10,7 +10,7 @@ export default function Homepage (props) {
   return(
     <div className="App">
       <div className="gradient__bg">
-        <Navbar sign={!props.user ? 'Sign In' : 'Sign Out'} signUrl={!props.user ? '/api/auth/login' : '/api/auth/logout'} />
+        <Navbar sign={!props.user.user ? 'Sign In' : 'Sign Out'} signUrl={!props.user.user ? '/api/auth/login' : '/api/auth/logout'} />
         <Header />
       </div>
       <Brand />

@@ -6,7 +6,7 @@ import getUser from './api/hooks/user';
 
 
 export default function Controller () {
-  
+
   if (getUser().isLoading) return <div>Loading...</div>;
   if (getUser().error) return <div>{error.message}</div>;
   if(getUser().user){
@@ -16,7 +16,7 @@ export default function Controller () {
     }else{
       return(
         <>
-          <Homepage  />
+          <Homepage user={getUser()} />
         </>
     );
     }
