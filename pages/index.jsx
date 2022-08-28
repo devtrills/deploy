@@ -11,7 +11,7 @@ export default function Controller () {
   if (getUser().error) return <div>{error.message}</div>;
   if(getUser().user){
     return (
-      <Dashboard user={getUser().user} username={JSON.stringify(getUser().user, null, 2)} />
+      <Dashboard user={getUser().user} username={JSON.stringify(getUser().user.given_name, null, 2)} />
       );
     }else{
       return(
