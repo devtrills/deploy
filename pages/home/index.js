@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from '../../public/src/containers';
+import { Blog, Possibility, Features, WhatGPT3, Header } from '../../public/src/containers';
 import { CTA, Brand, Navbar } from '../../public/src/components';
 import getUser from '../api/hooks/user';
 // function Heeader({ title }) {
@@ -20,7 +20,7 @@ export default function Homepage () {
       <Possibility />
       <CTA />
       <Blog />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

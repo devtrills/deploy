@@ -1,6 +1,8 @@
 import React from 'react';
 import Feature from '../../components/feature/Feature';
 // import './features.css';
+import featuresText from './featuresText';
+const ft = featuresText();
 
 const featuresData = [
   {
@@ -20,15 +22,25 @@ const featuresData = [
     text: 'Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush..',
   },
 ];
-
+console.log(ft.header);
 const Features = () => (
   <div className="gpt3__features section__padding" id="features">
     <div className="gpt3__features-heading">
-      <h1 className="gradient__text">The Future is Now and You Just Need to Realize It. Step into Future Today. & Make it Happen.</h1>
-      <p>Request Early Access to Get Started</p>
+      <div>
+        <h1 className="gradient__text">{ft.header}</h1>
+        <p>{ft.button}</p>
+      </div>
+      <div>
+        <h1 className="gradient__text">{ft.header2}</h1>
+        <p>{ft.button2}</p>
+      </div>
+      <div>
+        <h1 className="gradient__text">{ft.header3}</h1>
+        <p>{ft.button3}</p>
+      </div>
     </div>
     <div className="gpt3__features-container">
-      {featuresData.map((item, index) => (
+      {ft.featuresData.map((item, index) => (
         <Feature title={item.title} text={item.text} key={item.title + index} />
       ))}
     </div>

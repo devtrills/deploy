@@ -9,10 +9,10 @@ const Possibility = () => (
       <Image src={possibilityImage} alt="possibility" />
     </div>
     <div className="gpt3__possibility-content">
-      <h4>Request Early Access to Get Started</h4>
-      <h1 className="gradient__text">The possibilities are <br /> beyond your imagination</h1>
-      <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
-      <h4>Request Early Access to Get Started</h4>
+      <h4>NFTs and Dapps in the Metaverse</h4>
+      <h1 className="gradient__text">The possibilities are<br /> beyond your imagination</h1>
+      <p>Helping Brands and individuals create value and aquire commodities in the Metaverse.</p>
+      <h4>Contact Us to Get Started</h4>
     </div>
   </div>
 );
