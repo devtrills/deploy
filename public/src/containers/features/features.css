@@ -23,6 +23,12 @@
     font-weight: 800;
     font-family: var(--font-family);
 }
+.gpt3__features-heading > div{
+    margin-top: 1.3rem;
+    border-left: 1px solid #eee;
+    border-radius: 5px;
+    padding-left: .5rem;
+}
 
 .gpt3__features-heading p {
     color: var(--color-subtext);
@@ -49,6 +55,7 @@
 
     .gpt3__features-heading {
         margin: 0 0 2rem 0;
+        justify-content: space-between;
     }
 }
 
@@ -57,5 +64,11 @@
     .gpt3__features-heading h1 {
         font-size: 28px;
         line-height: 38px;
+    }
+    .gpt3__features-heading > div{
+        margin-top: 1.3rem;
+        border-left: 1px solid #eee;
+        border-radius: 5px;
+        padding-left: .5rem;
     }
 }
