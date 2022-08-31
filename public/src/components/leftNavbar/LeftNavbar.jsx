@@ -35,7 +35,7 @@ function leftnavbar() {
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faRightToBracket} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="/api/auth/logout">Referrals</a>
+                        <a href="#">Referrals</a>
                     </li>
                     {/*  */}
                     <li>
