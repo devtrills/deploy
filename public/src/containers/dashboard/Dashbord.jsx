@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './dashboard.module.css';
-import { DashContent, DashFooter, DashHeader, DashLeftNavbar } from '../../components';
+import { DashContent, DashHeader, DashLeftNavbar } from '../../components';
 
 export default function Dashboard(props) {
     return (
@@ -10,7 +10,6 @@ export default function Dashboard(props) {
                 <meta name="description" content="Created by Discrete" />
                 <link rel="icon" href='../../pro.ico' />
             </Head>
-            <DashFooter />
             <DashLeftNavbar />
             <DashHeader user={props.user} />
             <DashContent />
