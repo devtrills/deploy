@@ -14,9 +14,10 @@ const Navbar = (props) => {
   // Fixed Nav Effects
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if(window.scrollY > 100){
+      if(window.scrollY > 100 && window.location.pathname == '/home'){
+        // console.log();
         document.querySelector('.gpt3__navbar').classList.add('gpt3__navbar_fixed')
-      }else if(window.scrollY < 100){
+      }else if(window.scrollY < 100  && window.location.pathname == '/home'){
         document.querySelector('.gpt3__navbar').classList.remove('gpt3__navbar_fixed')
       }
     })
