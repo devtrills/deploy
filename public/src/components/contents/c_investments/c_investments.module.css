@@ -1,0 +1,84 @@
+.contentcontainer{
+    width: 100%;
+    color: #f2f2f2;
+    padding: 0 2rem;
+}
+.header{
+    text-align: center;
+}
+.header > h2{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.header > p{
+    margin-top: 1rem;
+}
+.plans{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    width: 100%;
+    margin-top: 3rem;
+    row-gap: 1rem;
+}
+.plan{
+    width: 30%;
+    background-color: #141c26;
+    text-align: center;
+    transition: all .3s;
+}
+.plan:hover{
+    transform: translateY(-3px);
+}
+.planTop{
+    border-bottom: 1px solid #495461;
+    padding: 1rem 0;;
+}
+.planTop > h2{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+.intrest{
+    font-size: 1.6rem;
+}
+.time{
+    font-size: .8rem;
+}
+/* .planBottom > div:nth-child(odd){
+    background-color: #495461;
+} */
+.planBottom > div{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    text-transform: capitalize;
+}
+.planButton{
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    background-color: #060b12;
+    font-size: .8rem;
+    color: #f2f2f2;
+    margin: 1rem 0;
+    transition: all .2s;
+}
+.planButton:hover{
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 1024px) {
+    /* For mobile tablets:*/
+    .plan{
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    /* For mobile mobile:*/ 
+    .plan{
+        width: 90%;
+    }
+}

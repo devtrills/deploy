@@ -14,10 +14,10 @@ const Navbar = (props) => {
   // Fixed Nav Effects
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if(window.scrollY > 100 && window.location.pathname == '/home'){
+      if(window.scrollY > 100 && (window.location.pathname == '/home' || window.location.pathname == '/')  ){
         // console.log();
         document.querySelector('.gpt3__navbar').classList.add('gpt3__navbar_fixed')
-      }else if(window.scrollY < 100  && window.location.pathname == '/home'){
+      }else if(window.scrollY < 100  && (window.location.pathname == '/home'|| window.location.pathname == '/') ){
         document.querySelector('.gpt3__navbar').classList.remove('gpt3__navbar_fixed')
       }
     })

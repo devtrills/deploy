@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from './leftNavbar.module.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBookOpen, faCog, faHeart, faRightToBracket, faRocket, faTachometer} from '@fortawesome/free-solid-svg-icons';
+import {faBookOpen, faCog, faPeopleArrows, faRightToBracket, faMoneyBillTransfer, faTachometer, faHandHoldingDollar} from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/router';
 import { RiCloseLine, RiMenu3Line } from 'react-icons/ri';
 
-function leftnavbar() {
+function leftnavbar(props) {
     
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -25,32 +25,28 @@ function leftnavbar() {
                 <ul>
                     <li>
                         <FontAwesomeIcon icon={faTachometer} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#">Dashboard</a>
+                        <a href="#dashboard" onClick={() => props.changeContent('dashboard')}>Dashboard</a>
                     </li>
                     <li>
-                        <FontAwesomeIcon icon={faRocket} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#">Investments</a>
+                        <FontAwesomeIcon icon={faHandHoldingDollar} style={{width: "18px", cursor: "pointer"}} />
+                        <a href="#investment" onClick={() => props.changeContent('investments')}>Investments</a>
+                    </li>
+                    <li>
+                    <FontAwesomeIcon icon={faMoneyBillTransfer} style={{width: "18px", cursor: "pointer"}} />
+                        <a href="#withdraw" onClick={() => props.changeContent('withdraw')}>Withdraw</a>
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faBookOpen} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#">Withdraw</a>
+                        <a href="#transactions" onClick={() => props.changeContent('transactions')}>Transactions</a>
                     </li>
                     <li>
-                    <FontAwesomeIcon icon={faHeart} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#" onClick={() => console.log('clicked fav')}>Deposit</a>
-                    </li>
-                    <li>
-                    <FontAwesomeIcon icon={faCog} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#">Transactions</a>
-                    </li>
-                    <li>
-                    <FontAwesomeIcon icon={faRightToBracket} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#">Referrals</a>
+                    <FontAwesomeIcon icon={faPeopleArrows} style={{width: "18px", cursor: "pointer"}} />
+                        <a href="#refferals" onClick={() => props.changeContent('referrals')}>Referrals</a>
                     </li>
                     {/*  */}
                     <li>
                         <FontAwesomeIcon icon={faTachometer} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#">Calculator</a>
+                        <a href="#calculator" onClick={() => props.changeContent('calculator')}>Calculator</a>
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faRightToBracket} style={{width: "18px", cursor: "pointer"}} />
