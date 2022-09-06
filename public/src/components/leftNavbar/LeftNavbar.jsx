@@ -12,10 +12,34 @@ function leftnavbar(props) {
     const router = useRouter();
     return(
         <div className={toggleMenu ? styles.closeContainer : styles.navcontainer} >
+            <div className={toggleMenu? styles.overlay  : styles.closeOverlay} onClick={() => setToggleMenu(false)} ></div>
             <div>
             {toggleMenu
-          ? <RiCloseLine style={{background: '#fff', boxShadow: '3px 0px 6px 0px rgba(133, 133, 133, 0.75)', borderRadius: '50%', visibility: 'visible',position: 'absolute', marginLeft: 'calc(200px + .4rem)', marginTop: '.6rem'}} color="#000" size={40} onClick={() => setToggleMenu(false)} />
-          : <RiMenu3Line  color="#000" size={40} onClick={() => setToggleMenu(true)} />}
+          ? <RiCloseLine 
+                style={{
+                    background: '#fff', 
+                    cursor: 'pointer',
+                    padding: '.5rem',
+                    boxShadow: '3px 0px 6px 0px rgba(133, 133, 133, 0.75)', 
+                    borderRadius: '50%', 
+                    visibility: 'visible',
+                    position: 'absolute', 
+                    marginLeft: 'calc(200px + .4rem)', 
+                    marginTop: '.6rem'}} 
+                color="#000" size={40} 
+                onClick={() => setToggleMenu(false)} 
+                />
+          : <RiMenu3Line 
+                style={{
+                    background: '#fff', 
+                    cursor: 'pointer',
+                    padding: '.5rem',
+                    boxShadow: '3px 0px 6px 0px rgba(133, 133, 133, 0.75)', 
+                    borderRadius: '50%'}}
+                color="#000" 
+                size={40} 
+                onClick={() => setToggleMenu(true)} 
+                />}
             <div className={styles.logo} onClick={() => router.push('/home')}>
                 <h2>Investrill</h2>
             </div>

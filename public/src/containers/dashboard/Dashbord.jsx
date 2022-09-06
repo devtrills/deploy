@@ -5,8 +5,9 @@ import { DashContent, DashHeader, DashLeftNavbar } from '../../components';
 import {C_dashboard, C_investments } from '../../components/contents';
 
 export default function Dashboard(props) {
+    const state = useState();
     const [content, setContent ] = useState('dashboard');
-    console.log(content);
+
     const changeContent = (content) => {
         setContent(content);
     }
@@ -20,7 +21,7 @@ export default function Dashboard(props) {
                 return <C_dashboard />
         }
     }
-
+    console.log(state);
     return (
         <div className={styles.body}>
             <Head>
@@ -31,6 +32,7 @@ export default function Dashboard(props) {
             <DashLeftNavbar changeContent={changeContent} />
             <DashHeader user={props.user} />
             <DashContent>{showContent()}</DashContent>
+            <div className={styles.overlay}></div>
         </div>
     );
 }
