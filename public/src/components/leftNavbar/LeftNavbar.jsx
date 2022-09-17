@@ -49,29 +49,30 @@ function leftnavbar(props) {
                 <ul>
                     <li>
                         <FontAwesomeIcon icon={faTachometer} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#dashboard" onClick={() => props.changeContent('dashboard')}>Dashboard</a>
+                        <a href="#dashboard" onClick={() => {props.changeContent('dashboard'); setToggleMenu(false)}}>Dashboard</a>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faHandHoldingDollar} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#investment" onClick={() => props.changeContent('investments')}>Investments</a>
+                        <a href="#investment" onClick={() => {props.changeContent('investments'); setToggleMenu(false)}}>Investments</a>
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faMoneyBillTransfer} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#withdraw" onClick={() => props.changeContent('withdraw')}>Withdraw</a>
+                        <a href="#withdraw" onClick={() => {props.changeContent('withdraw'); setToggleMenu(false)}}>Withdraw</a>
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faBookOpen} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#transactions" onClick={() => props.changeContent('transactions')}>Transactions</a>
+                        <a href="#transactions" onClick={() => {props.changeContent('transactions'); setToggleMenu(false)}}>Transactions</a>
                     </li>
                     <li>
                     <FontAwesomeIcon icon={faPeopleArrows} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#refferals" onClick={() => props.changeContent('referrals')}>Referrals</a>
+                        <a href="#refferals" onClick={() => {props.changeContent('referrals'); setToggleMenu(false)}}>Referrals</a>
                     </li>
-                    {/*  */}
-                    <li>
+                    {/* 
+                                            <li>
                         <FontAwesomeIcon icon={faTachometer} style={{width: "18px", cursor: "pointer"}} />
-                        <a href="#calculator" onClick={() => props.changeContent('calculator')}>Calculator</a>
+                        <a href="#calculator" onClick={() => {props.changeContent('calculator'); setToggleMenu(false)}}>Calculator</a>
                     </li>
+                     */}
                     <li>
                     <FontAwesomeIcon icon={faRightToBracket} style={{width: "18px", cursor: "pointer"}} />
                         <a href="/api/auth/logout">Logout</a>

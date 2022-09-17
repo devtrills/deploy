@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './c_investments.module.css';
-import Modal from '../../modals/modal';
 
 function Contents(props) {
 
@@ -16,15 +15,15 @@ function Contents(props) {
                     <div className={styles.planTop}>
                         <h2>basic</h2>
                         <div className={styles.months}>
-                            <p className={styles.intrest}>18%</p>
+                            <p className={styles.intrest}>12%</p>
                             <p className={styles.time}>Every Month</p>
                         </div>
                     </div>
                     <div className={styles.planBottom}>
-                        <div><p>min deposit</p><p>-</p><p>$1,000</p></div>
-                        <div><p>max deposit</p><p>-</p><p>$10,000</p></div>
-                        <div><p>capital return</p><p>-</p><p>no</p></div>
-                        <div><p>total return</p><p>-</p><p>12%</p></div>
+                        <div><p>min deposit</p><p>$1,000</p></div>
+                        <div><p>max deposit</p><p>$10,000</p></div>
+                        <div><p>capital return</p><p>no</p></div>
+                        <div><p>total return</p><p>12%</p></div>
                         <button className={styles.planButton}>choose this plan</button>
                     </div>
                 </div>
@@ -37,10 +36,10 @@ function Contents(props) {
                         </div>
                     </div>
                     <div className={styles.planBottom}>
-                        <div><p>min deposit</p><p>-</p><p>$10,100</p></div>
-                        <div><p>max deposit</p><p>-</p><p>$100,000</p></div>
-                        <div><p>capital return</p><p>-</p><p>no</p></div>
-                        <div><p>total return</p><p>-</p><p>15%</p></div>
+                        <div><p>min deposit</p><p>$10,100</p></div>
+                        <div><p>max deposit</p><p>$100,000</p></div>
+                        <div><p>capital return</p><p>no</p></div>
+                        <div><p>total return</p><p>15%</p></div>
                         <button className={styles.planButton}>choose this plan</button>
                     </div>
                 </div>
@@ -53,10 +52,10 @@ function Contents(props) {
                         </div>
                     </div>
                     <div className={styles.planBottom}>
-                        <div><p>min deposit</p><p>-</p><p>$100,100</p></div>
-                        <div><p>max deposit</p><p>-</p><p>$1,000,000</p></div>
-                        <div><p>capital return</p><p>-</p><p>no</p></div>
-                        <div><p>total return</p><p>-</p><p>18%</p></div>
+                        <div><p>min deposit</p><p>$100,100</p></div>
+                        <div><p>max deposit</p><p>$1,000,000</p></div>
+                        <div><p>capital return</p><p>no</p></div>
+                        <div><p>total return</p><p>18%</p></div>
                         <button className={styles.planButton}>choose this plan</button>
                     </div>
                 </div>
@@ -69,17 +68,16 @@ function Contents(props) {
                         </div>
                     </div>
                     <div className={styles.planBottom}>
-                        <div><p>min deposit</p><p>-</p><p>$1,000,100</p></div>
-                        <div><p>max deposit</p><p>-</p><p>$1,000,000,000</p></div>
-                        <div><p>capital return</p><p>-</p><p>no</p></div>
-                        <div><p>total return</p><p>-</p><p>21%</p></div>
+                        <div><p>min deposit</p><p>$1,000,100</p></div>
+                        <div><p>max deposit</p><p>$1,000,000,000</p></div>
+                        <div><p>capital return</p><p>no</p></div>
+                        <div><p>total return</p><p>21%</p></div>
                         <button className={styles.planButton}>choose this plan</button>
                     </div>
                 </div>
                 
                 
             </div>
-            <Modal />
         </div>
     );
 }

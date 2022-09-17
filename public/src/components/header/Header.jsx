@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './header.module.css';
 import Image from 'next/image';
-import {userImg} from '../../containers/dashboard/imports';
+// import {userImg} from '../../containers/dashboard/imports';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 function Header(props) {
     
@@ -13,9 +15,10 @@ function Header(props) {
                     welcome to your workspace
                 </div>
             </div>
-            <div className={styles.profile}>
+            {/* <div className={styles.profile}>
                 <Image alt='profile image' src={userImg} className={styles.image} />
-            </div>
+            </div> */}
+            <FontAwesomeIcon className={styles.image} icon={faUserCircle} style={{width: "2rem", height: '2rem', cursor: "pointer"}} />
 
         </div>
     );

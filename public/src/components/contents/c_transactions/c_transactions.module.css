@@ -1,0 +1,43 @@
+.contentcontainer{
+    width: 100%;
+    color: #f2f2f2;
+    padding: 0 2rem;
+}
+.header{
+    text-align: center;
+}
+.header > h2{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.header > p{
+    margin-top: 1rem;
+}
+.card_trans{
+    background-color: #141c26;
+    border-radius: 5px;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    overscroll-behavior-inline:unset;
+}
+.card_trans_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1024px) {
+    /* For mobile tablets:*/
+    .card_trans{
+        width: 48.06rem;
+        /* overflow-x: scroll; */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile mobile:*/ 
+
+    .card_trans{
+        width: 48.06rem;
+        /* overflow-x: scroll; */
+    }
+}

@@ -2,17 +2,17 @@ import React, {useState } from 'react';
 import Head from 'next/head';
 import styles from './dashboard.module.css';
 import { DashContent, DashHeader, DashLeftNavbar } from '../../components';
-import {C_dashboard, C_investments } from '../../components/contents';
+import {C_dashboard, C_investments, C_transactions, C_referrals } from '../../components/contents';
 
 export default function Dashboard(props) {
     const state = useState();
     const [content, setContent ] = useState('dashboard');
-    // const [rerender, setRerender] = useState(false);
+    const [rerender, setRerender] = useState(false);
 
     const changeContent = (content) => {
         setContent(content);
         localStorage.setItem('content', content);
-        // setRerender(!rerender); //use this incase something breaks in side-nav clicks
+        setRerender(!rerender); //use this incase something breaks in side-nav clicks
     }
     const showContent = () => {
         switch(localStorage.getItem('content')){
@@ -20,6 +20,10 @@ export default function Dashboard(props) {
                     return <C_dashboard />;
             case 'investments':
                     return <C_investments />;
+            case 'transactions':
+                    return <C_transactions />;
+            case 'referrals':
+                    return <C_referrals />;
             default:
                 return <C_dashboard />
         }

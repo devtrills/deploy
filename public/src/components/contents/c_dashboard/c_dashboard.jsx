@@ -64,8 +64,8 @@ function dashboard(props) {
                         <p style={{width: '7%'}}>
                             <FontAwesomeIcon icon={faLink} style={{width: "18px", cursor: "pointer"}} />
                         </p>
-                        <p style={{width: '70%'}}>https://investrill.com/register/miller</p>
-                        <p style={{width: '23%', cursor: 'pointer'}}>
+                        <p className={styles.link} style={{width: '70%'}}>https://investrill.com/register/miller</p>
+                        <p className={styles.copyLink}>
                             <FontAwesomeIcon icon={faClone} style={{width: "18px", cursor: "pointer"}}/>Copy Link
                         </p>
                     </div>
